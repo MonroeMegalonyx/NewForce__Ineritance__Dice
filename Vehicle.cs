@@ -4,12 +4,22 @@ namespace inheritance
 {
   public class Vehicle
   {
-    public string MainColor { get; set; }
-    public string MaximumOccupancy { get; set; }
+    public virtual string MainColor { get; set; }
+    public virtual string MaximumOccupancy { get; set; }
 
-        public void Drive()
+    public virtual void Drive()
     {
-        Console.WriteLine("Vrooom!");
+      Console.WriteLine("Vrooom!");
+    }
+    
+    public virtual void Turn()
+    {
+      Console.WriteLine("Vrooom!");
+    }
+    
+    public virtual void Stop()
+    {
+      Console.WriteLine("Vrooom!");
     }
   }
 }
