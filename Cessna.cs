@@ -8,9 +8,10 @@ namespace inheritance
     public override string MainColor { get; set; }
     public override string MaximumOccupancy { get; set; }
 
+    public int CurrentTankPercentage { get; set; } = 43;
     public void RefuelTank()
     {
-      // method definition omitted
+      CurrentTankPercentage = 100;
     }
     public override void Drive()
     {

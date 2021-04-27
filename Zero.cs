@@ -2,25 +2,26 @@ using System;
 
 namespace inheritance
 {
-  public class Zero : Vehicle  // Electric motorcycle
+  public class Zero : IElectricVehicle  // Electric motorcycle
   {
     public double BatteryKWh { get; set; }
-    public override string MainColor { get; set; }
-    public override string MaximumOccupancy { get; set; }
+    public string MainColor { get; set; }
+    public string MaximumOccupancy { get; set; }
 
+    public int CurrentChargePercentage { get; set; } = 10;
     public void ChargeBattery()
     {
-      // method definition omitted
+      CurrentChargePercentage = 100;
     }
-    public override void Drive()
+    public void Drive()
     {
       Console.WriteLine($"The {MainColor} Zero zips by. Swooooosh! ");
     }
-    public override void Turn()
+    public void Turn()
     {
       Console.WriteLine($"The {MainColor} Zero barely make the turn. Phew! ");
     }
-    public override void Stop()
+    public void Stop()
     {
       Console.WriteLine($"The {MainColor} Zero screeches to a halt. DAMMMMMMN! ");
     }
