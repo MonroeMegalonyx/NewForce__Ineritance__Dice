@@ -4,10 +4,10 @@ namespace inheritance
 {
   public interface IGasVehicle
   {
-    public double FuelCapacity { get; }
-    public int CurrentTankPercentage { get; }
+   double FuelCapacity { get; }
+   int CurrentTankPercentage { get; }
 
-    public void RefuelTank();
+   void RefuelTank();
 
   }
 }

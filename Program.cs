@@ -71,29 +71,29 @@ namespace inheritance
 
       /***********************************************/
 
-      // Ram ram = new Ram();
-      // Cessna cessna150 = new Cessna();
+      Ram ram = new Ram();
+      Cessna cessna150 = new Cessna();
 
-      // List <???> gasVehicles = new List<???> () {
-      //   ram, cessna150
-      //       };
+      List <IGasVehicle> gasVehicles = new List<IGasVehicle> () {
+        ram, cessna150
+            };
 
-      // Console.WriteLine("Gas Vehicles");
-      // foreach (??? gv in gasVehicles)
-      // {
-      //   Console.WriteLine($"{gv.CurrentTankPercentage}");
-      // }
+      Console.WriteLine("Gas Vehicles");
+      foreach (IGasVehicle gv in gasVehicles)
+      {
+        Console.WriteLine($"The gas vehicle has {gv.CurrentTankPercentage} of its tank left");
+      }
 
-      // foreach (??? gv in gasVehicles)
-      // {
-      //   // This should completely refuel the gas tank
-      //   gv.RefuelTank();
-      // }
+      foreach (IGasVehicle gv in gasVehicles)
+      {
+        // This should completely refuel the gas tank
+        gv.RefuelTank();
+      }
 
-      // foreach (??? gv in gasVehicles)
-      // {
-      //   Console.WriteLine($"{gv.CurrentTankPercentage}");
-      // }
+      foreach (IGasVehicle gv in gasVehicles)
+      {
+        Console.WriteLine($"Now the vehicle is full at {gv.CurrentTankPercentage}%");
+      }
     }
   }
 }
